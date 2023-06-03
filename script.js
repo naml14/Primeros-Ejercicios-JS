@@ -431,23 +431,27 @@ function transporte() {
         while (isNaN(distancia)) {
             distancia=parseInt(prompt("Ingrese la cantidad de kilometros recorridos, Si no es un número estará en un bucle infinito"))
         }
+        let litros=parseInt(prompt("Ingrese la cantidad de litros consumidos, Si no es un número estará en un bucle infinito"))
+        while (isNaN(litros)) {
+            litros=parseInt(prompt("Ingrese la cantidad de litros consumidos, Si no es un número estará en un bucle infinito"))
+        }
         switch (auto) {
             case 1:
-                if (distancia<=100) {
+                if (litros<=100) {
                     alert(`Su total a pagar es: $${(coche*distancia)+5}`)
                 } else {
                     alert(`Su total a pagar es: $${(coche*distancia)+10}`)
                 }
                 break;
             case 2:
-                if (distancia<=100) {
+                if (litros<=100) {
                     alert(`Su total a pagar es: $${(moto*distancia)+5}`)
                 } else {
                     alert(`Su total a pagar es: $${(moto*distancia)+10}`)
                 }
                 break;
             case 3:
-                if (distancia<=100) {
+                if (litros<=100) {
                     alert(`Su total a pagar es: $${(autobus*distancia)+5}`)
                 } else {
                     alert(`Su total a pagar es: $${(autobus*distancia)+10}`)
